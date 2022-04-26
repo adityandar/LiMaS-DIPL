@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "1091028081934",
+    "project_id": "we-help-app-d9b17",
+    "storage_bucket": "we-help-app-d9b17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091028081934:android:b10fec2d8e93ba0a964b5f",
+        "android_client_info": {
+          "package_name": "com.adityandar.wehelp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1091028081934-3o6fdhpgdr34ifc8do130l6a32mfv6me.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlhbiVNY-d9KWRjxnxSmFJzM9zl4EkkLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1091028081934-3o6fdhpgdr34ifc8do130l6a32mfv6me.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1091028081934-v35o1pbl9bosc4sdoq9kp7dp08jmducu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.weHelpApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1091028081934:android:8e8240b24417528d964b5f",
+        "android_client_info": {
+          "package_name": "com.example.we_help_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1091028081934-3o6fdhpgdr34ifc8do130l6a32mfv6me.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlhbiVNY-d9KWRjxnxSmFJzM9zl4EkkLg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1091028081934-3o6fdhpgdr34ifc8do130l6a32mfv6me.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1091028081934-v35o1pbl9bosc4sdoq9kp7dp08jmducu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.weHelpApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
