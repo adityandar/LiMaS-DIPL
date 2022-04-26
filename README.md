@@ -1,6 +1,6 @@
 # we_help_app
 
-A new Flutter project.
+A manual hackathon, wkwk.
 
 ## Getting Started
 
