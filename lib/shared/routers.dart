@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:get/route_manager.dart';
 import 'package:we_help_app/features/home/pages/home_page.dart';
 import 'package:we_help_app/features/login/pages/login_page.dart';
