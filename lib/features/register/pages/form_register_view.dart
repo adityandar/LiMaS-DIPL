@@ -4,10 +4,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:formz/formz.dart';
 import 'package:get/get.dart';
 import 'package:we_help_app/features/register/cubits/register_cubit.dart';
+import 'package:we_help_app/features/role_check/pages/role_check_page.dart';
 
 import '../../../shared/shared.dart';
 import '../../../widgets/widgets.dart';
-import '../../home/pages/home_page.dart';
 import '../../login/pages/login_page.dart';
 
 class FormRegisterView extends StatefulWidget {
@@ -30,7 +30,7 @@ class _FormRegisterViewState extends State<FormRegisterView> {
           Get.snackbar('Error', state.exceptionError);
         }
         if (state.status.isSubmissionSuccess) {
-          Get.offAllNamed(homePageRoute);
+          Get.offAllNamed(rolePageRoute);
         }
       },
       child: Form(
@@ -79,7 +79,6 @@ class _FormRegisterViewState extends State<FormRegisterView> {
                 if (_formKey.currentState?.validate() ?? false) {
                   cubit.register();
                 }
-                ;
               },
             ),
             SizedBox(height: 14.w),

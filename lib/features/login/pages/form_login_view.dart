@@ -3,10 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:formz/formz.dart';
 import 'package:get/get.dart';
+import 'package:we_help_app/features/role_check/pages/role_check_page.dart';
 
 import '../../../shared/shared.dart';
 import '../../../widgets/widgets.dart';
-import '../../home/pages/home_page.dart';
 import '../../register/pages/register_page.dart';
 import '../cubits/login_cubit.dart';
 
@@ -29,7 +29,7 @@ class _FormLoginViewState extends State<FormLoginView> {
           Get.snackbar('Error', state.exceptionError);
         }
         if (state.status.isSubmissionSuccess) {
-          Get.offAllNamed(homePageRoute);
+          Get.offAllNamed(rolePageRoute);
         }
       },
       child: Form(

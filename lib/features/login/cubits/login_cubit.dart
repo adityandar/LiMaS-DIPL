@@ -30,16 +30,20 @@ class LoginCubit extends Cubit<LoginState> {
       emit(state.copyWith(status: FormzStatus.submissionSuccess));
     } on FirebaseAuthException catch (error) {
       emit(state.copyWith(
-          exceptionError: error.message.toString(),
-          status: FormzStatus.submissionFailure));
+        exceptionError: error.message.toString(),
+        status: FormzStatus.submissionFailure,
+      ));
     } on PlatformException catch (error) {
       emit(state.copyWith(
-          exceptionError: error.message.toString(),
-          status: FormzStatus.submissionFailure));
+        exceptionError: error.message.toString(),
+        status: FormzStatus.submissionFailure,
+      ));
     } catch (error) {
       emit(state.copyWith(
-          exceptionError: "Unexpected error please try again later",
-          status: FormzStatus.submissionFailure));
+        exceptionError: "Unexpected error please try again later",
+        status: FormzStatus.submissionFailure,
+      ));
     }
+    emit(state.copyWith(status: FormzStatus.pure));
   }
 }
