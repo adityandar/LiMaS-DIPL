@@ -67,56 +67,58 @@ class _TeacherHomePageState extends State<TeacherHomePage> {
                   hintText: 'Cari di sini...',
                 ),
               ),
-              BlocBuilder<ClassCubit, ClassState>(
-                builder: (context, state) {
-                  if (state.classes.isNotEmpty) {
-                    final classes = state.classes;
-                    return RefreshIndicator(
-                      onRefresh: () async => cubit.getClasses(),
-                      child: ListView.separated(
-                        shrinkWrap: true,
-                        itemCount: classes.length,
-                        itemBuilder: (context, index) {
-                          return ListTile(
-                            leading: const Icon(Icons.class_),
-                            title: Text(
-                              classes[index].nama,
-                              maxLines: 1,
-                              style: textHeading1(color: blackColor),
-                            ),
-                            subtitle: Text(
-                              classes[index].deskripsi,
-                              maxLines: 2,
-                              style: textButtonNormal(color: blackColor),
-                            ),
-                            minVerticalPadding: 10,
-                            onTap: () => Get.toNamed(
-                              isTeacher
-                                  ? detailTeacherClassPageRoute
-                                  : detailStudentClassPageRoute,
-                              arguments: classes[index],
-                            ),
-                            trailing: isTeacher
-                                ? IconButton(
-                                    icon: const Icon(
-                                      Icons.close,
-                                    ),
-                                    onPressed: () =>
-                                        cubit.deleteClass(classes[index].id),
-                                  )
-                                : null,
-                          );
-                        },
-                        separatorBuilder: (_, __) {
-                          return const Divider(
-                            height: 2,
-                          );
-                        },
-                      ),
-                    );
-                  }
-                  return const SizedBox();
-                },
+              Expanded(
+                child: BlocBuilder<ClassCubit, ClassState>(
+                  builder: (context, state) {
+                    if (state.classes.isNotEmpty) {
+                      final classes = state.classes;
+                      return RefreshIndicator(
+                        onRefresh: () async => cubit.getClasses(),
+                        child: ListView.separated(
+                          shrinkWrap: true,
+                          itemCount: classes.length,
+                          itemBuilder: (context, index) {
+                            return ListTile(
+                              leading: const Icon(Icons.class_),
+                              title: Text(
+                                classes[index].nama,
+                                maxLines: 1,
+                                style: textHeading1(color: blackColor),
+                              ),
+                              subtitle: Text(
+                                classes[index].deskripsi,
+                                maxLines: 2,
+                                style: textButtonNormal(color: blackColor),
+                              ),
+                              minVerticalPadding: 10,
+                              onTap: () => Get.toNamed(
+                                isTeacher
+                                    ? detailTeacherClassPageRoute
+                                    : detailStudentClassPageRoute,
+                                arguments: classes[index],
+                              ),
+                              trailing: isTeacher
+                                  ? IconButton(
+                                      icon: const Icon(
+                                        Icons.close,
+                                      ),
+                                      onPressed: () =>
+                                          cubit.deleteClass(classes[index].id),
+                                    )
+                                  : null,
+                            );
+                          },
+                          separatorBuilder: (_, __) {
+                            return const Divider(
+                              height: 2,
+                            );
+                          },
+                        ),
+                      );
+                    }
+                    return const SizedBox();
+                  },
+                ),
               ),
             ],
           ),
